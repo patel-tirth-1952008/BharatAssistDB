@@ -1,0 +1,17 @@
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\bin\Debug\net10.0\BharatAssist.Infrastructure.deps.json
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\bin\Debug\net10.0\BharatAssist.Infrastructure.runtimeconfig.json
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\bin\Debug\net10.0\BharatAssist.Infrastructure.dll
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\bin\Debug\net10.0\BharatAssist.Infrastructure.pdb
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\bin\Debug\net10.0\BharatAssist.Core.dll
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\bin\Debug\net10.0\BharatAssist.Core.pdb
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAssist.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAssist.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAssist.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAssist.Infrastructure.AssemblyInfo.cs
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAssist.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAs.18372EB3.Up2Date
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAssist.Infrastructure.dll
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\refint\BharatAssist.Infrastructure.dll
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAssist.Infrastructure.pdb
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\BharatAssist.Infrastructure.genruntimeconfig.cache
+C:\Users\tirth\BharatAssist\BharatAssist.Infrastructure\obj\Debug\net10.0\ref\BharatAssist.Infrastructure.dll

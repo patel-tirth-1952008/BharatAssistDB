@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="BharatAssist.API/BharatAssist.API.csproj" />
+  <Project Path="BharatAssist.Application/BharatAssist.Application.csproj" />
+  <Project Path="BharatAssist.Core/BharatAssist.Core.csproj" />
+  <Project Path="BharatAssist.Infrastructure/BharatAssist.Infrastructure.csproj" />
+  <Project Path="BharatAssist.Shared/BharatAssist.Shared.csproj" />
+</Solution>
