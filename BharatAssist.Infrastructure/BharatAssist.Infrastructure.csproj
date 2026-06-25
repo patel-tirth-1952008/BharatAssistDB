@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BharatAssist.Core\BharatAssist.Core.csproj" />
+    <ProjectReference Include="..\BharatAssist.Application\BharatAssist.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

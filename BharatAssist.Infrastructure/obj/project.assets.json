@@ -1252,6 +1252,19 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "BharatAssist.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "BharatAssist.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BharatAssist.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BharatAssist.Application.dll": {}
+        }
+      },
       "BharatAssist.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -3669,6 +3682,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "BharatAssist.Application/1.0.0": {
+      "type": "project",
+      "path": "../BharatAssist.Application/BharatAssist.Application.csproj",
+      "msbuildProject": "../BharatAssist.Application/BharatAssist.Application.csproj"
+    },
     "BharatAssist.Core/1.0.0": {
       "type": "project",
       "path": "../BharatAssist.Core/BharatAssist.Core.csproj",
@@ -3677,6 +3695,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "BharatAssist.Application >= 1.0.0",
       "BharatAssist.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 10.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.9",
@@ -3719,6 +3738,9 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
+            "C:\\Users\\tirth\\BharatAssist\\BharatAssist.Application\\BharatAssist.Application.csproj": {
+              "projectPath": "C:\\Users\\tirth\\BharatAssist\\BharatAssist.Application\\BharatAssist.Application.csproj"
+            },
             "C:\\Users\\tirth\\BharatAssist\\BharatAssist.Core\\BharatAssist.Core.csproj": {
               "projectPath": "C:\\Users\\tirth\\BharatAssist\\BharatAssist.Core\\BharatAssist.Core.csproj"
             }

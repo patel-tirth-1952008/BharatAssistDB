@@ -1,12 +1,12 @@
-using Microsoft.EntityFrameworkCore;
+using BharatAssist.Core.Entities;
 using BharatAssist.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using BharatAssist.API.DTOs;
+using BharatAssist.Shared;
 namespace BharatAssist.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-
 public class CategoryController : ControllerBase
 {
     private readonly BharatAssistDbContext _context;
@@ -20,13 +20,13 @@ public class CategoryController : ControllerBase
     public IActionResult Get()
     {
         var categories = _context.Categories
-        .Select(c => new CategoryDto
-        {
-            CategoryId = c.CategoryId,
-            CategoryName = c.CategoryName,
-            Icon = c.Icon
-        })
-        .ToList();
+            .Select(c => new CategoryDto
+            {
+                CategoryId = c.CategoryId,
+                CategoryName = c.CategoryName,
+                Icon = c.Icon
+            })
+            .ToList();
 
         return Ok(new ApiResponse<List<CategoryDto>>
         {
@@ -35,6 +35,7 @@ public class CategoryController : ControllerBase
             Data = categories
         });
     }
+
     [HttpGet("{id}")]
     public IActionResult GetById(int id)
     {
@@ -45,17 +46,18 @@ public class CategoryController : ControllerBase
 
         return Ok(category);
     }
+
     [HttpPost]
     public IActionResult Create(Category category)
     {
         _context.Categories.Add(category);
-
         _context.SaveChanges();
 
         return CreatedAtAction(nameof(GetById),
             new { id = category.CategoryId },
             category);
     }
+
     [HttpPut("{id}")]
     public IActionResult Update(int id, Category updatedCategory)
     {
@@ -65,7 +67,6 @@ public class CategoryController : ControllerBase
             return NotFound();
 
         category.CategoryName = updatedCategory.CategoryName;
-        category.Description = updatedCategory.Description;
         category.Icon = updatedCategory.Icon;
         category.DisplayOrder = updatedCategory.DisplayOrder;
         category.IsActive = updatedCategory.IsActive;
@@ -74,6 +75,7 @@ public class CategoryController : ControllerBase
 
         return NoContent();
     }
+
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
@@ -83,7 +85,6 @@ public class CategoryController : ControllerBase
             return NotFound();
 
         _context.Categories.Remove(category);
-
         _context.SaveChanges();
 
         return NoContent();

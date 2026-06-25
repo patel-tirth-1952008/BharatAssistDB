@@ -8,6 +8,7 @@ C:\Users\tirth\BharatAssist\BharatAssist.Application\obj\Debug\net10.0\BharatAss
 C:\Users\tirth\BharatAssist\BharatAssist.Application\obj\Debug\net10.0\BharatAssist.Application.AssemblyInfoInputs.cache
 C:\Users\tirth\BharatAssist\BharatAssist.Application\obj\Debug\net10.0\BharatAssist.Application.AssemblyInfo.cs
 C:\Users\tirth\BharatAssist\BharatAssist.Application\obj\Debug\net10.0\BharatAssist.Application.csproj.CoreCompileInputs.cache
+C:\Users\tirth\BharatAssist\BharatAssist.Application\obj\Debug\net10.0\BharatAssist.Application.sourcelink.json
 C:\Users\tirth\BharatAssist\BharatAssist.Application\obj\Debug\net10.0\BharatAs.A060D225.Up2Date
 C:\Users\tirth\BharatAssist\BharatAssist.Application\obj\Debug\net10.0\BharatAssist.Application.dll
 C:\Users\tirth\BharatAssist\BharatAssist.Application\obj\Debug\net10.0\refint\BharatAssist.Application.dll

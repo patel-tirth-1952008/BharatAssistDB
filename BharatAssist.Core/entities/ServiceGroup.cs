@@ -8,14 +8,9 @@ public class ServiceGroup
 
     public string GroupName { get; set; } = string.Empty;
 
-    public string? Description { get; set; }
+    public string Description { get; set; } = string.Empty;
 
-    public string? Icon { get; set; }
+    public Category Category { get; set; } = null!;
 
-    public int DisplayOrder { get; set; }
-
-    public bool IsActive { get; set; }
-
-    // Navigation Property
-    public Category? Category { get; set; }
+    public ICollection<Service> Services { get; set; } = new List<Service>();
 }

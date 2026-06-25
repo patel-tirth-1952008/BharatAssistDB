@@ -1,20 +1,16 @@
-using System.Collections.Generic;
-namespace BharatAssist.Core.Entities
+namespace BharatAssist.Core.Entities;
+
+public class Category
 {
-    public class Category
-    {
-        public int CategoryId { get; set; }
+    public int CategoryId { get; set; }
 
-        public string CategoryName { get; set; }
+    public string CategoryName { get; set; } = string.Empty;
 
-        public string? Description { get; set; }
+    public string Icon { get; set; } = string.Empty;
 
-        public string? Icon { get; set; }
+    public int DisplayOrder { get; set; }
 
-        public int DisplayOrder { get; set; }
+    public bool IsActive { get; set; } = true;
 
-        public bool IsActive { get; set; }
-
-        public List<ServiceGroup> ServiceGroups { get; set; } = new();
-    }
+    public ICollection<ServiceGroup> ServiceGroups { get; set; } = new List<ServiceGroup>();
 }

@@ -24,7 +24,7 @@ public class ServiceGroupController : ControllerBase
                 ServiceGroupId = g.ServiceGroupId,
                 CategoryId = g.CategoryId,
                 GroupName = g.GroupName,
-                Icon = g.Icon
+                
             })
             .ToList();
 

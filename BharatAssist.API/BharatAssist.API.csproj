@@ -20,6 +20,7 @@
     <ProjectReference Include="..\BharatAssist.Core\BharatAssist.Core.csproj" />
     <ProjectReference Include="..\BharatAssist.Application\BharatAssist.Application.csproj" />
     <ProjectReference Include="..\BharatAssist.Infrastructure\BharatAssist.Infrastructure.csproj" />
+    <ProjectReference Include="..\BharatAssist.Shared\BharatAssist.Shared.csproj" />
   </ItemGroup>
 
 </Project>
