@@ -4,15 +4,11 @@ public class User
 {
     public int UserId { get; set; }
 
-    public string FullName { get; set; } = string.Empty;
+    public string FullName { get; set; } = "";
 
-    public string Email { get; set; } = string.Empty;
+    public string Email { get; set; } = "";
 
-    public string PasswordHash { get; set; } = string.Empty;
+    public string Password { get; set; } = "";
 
-    public string? MobileNumber { get; set; }
-
-    public bool IsVerified { get; set; }
-
-    public DateTime CreatedAt { get; set; }
+    public bool IsAdmin { get; set; }
 }

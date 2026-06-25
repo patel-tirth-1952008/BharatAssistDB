@@ -2,6 +2,7 @@ using BharatAssist.Application.Interfaces;
 using BharatAssist.Infrastructure.Data;
 using BharatAssist.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using BharatAssist.API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
@@ -42,5 +43,10 @@ app.UseCors("AllowFlutter");
 app.UseAuthorization();
 
 app.MapControllers();
+using(var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<BharatAssistDbContext>();
 
+    DbSeeder.Seed(db);
+}
 app.Run();
