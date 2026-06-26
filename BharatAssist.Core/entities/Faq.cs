@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace BharatAssist.Core.Entities;
 
 public class Faq
 {
+    [Key]
+    [Column("FAQId")]
     public int FaqId { get; set; }
 
     public int ServiceId { get; set; }

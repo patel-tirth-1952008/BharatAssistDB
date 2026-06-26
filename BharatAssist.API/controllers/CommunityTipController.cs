@@ -27,8 +27,9 @@ public class CommunityTipController : ControllerBase
             .Select(x => new CommunityTipDto
             {
                 CommunityTipId = x.CommunityTipId,
-                UserName = x.UserName,
-                Tip = x.Tip
+                Problem = x.Problem,
+                Solution = x.Solution,
+                Votes = x.Votes
             })
 
             .ToListAsync();

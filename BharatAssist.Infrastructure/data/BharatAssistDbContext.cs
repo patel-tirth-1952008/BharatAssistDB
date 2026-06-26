@@ -50,6 +50,11 @@ public class BharatAssistDbContext : DbContext
             .WithMany(c => c.ServiceGroups)
             .HasForeignKey(sg => sg.CategoryId);
 
+        modelBuilder.Entity<Service>()
+            .HasOne(x => x.ServiceGroup)
+            .WithMany()
+            .HasForeignKey(x => x.ServiceGroupId);    
+
         
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BharatAssist.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01935e4c84afc1164c8dd18d0fbf12aa349e50b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bde37ad5a5126d7e943d412b5efaee3640205b72")]
 [assembly: System.Reflection.AssemblyProductAttribute("BharatAssist.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BharatAssist.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -17,19 +17,18 @@ public class ServiceController : ControllerBase
         _context = context;
     }
 
-    [HttpGet("{serviceGroupId}")]
-    public async Task<IActionResult> Get(int serviceGroupId)
+    [HttpGet("{groupId}")]
+    public async Task<IActionResult> Get(int groupId)
     {
         var services = await _context.Services
 
-            .Where(x => x.ServiceGroupId == serviceGroupId)
+            .Where(x => x.ServiceGroupId == groupId)
 
             .OrderBy(x => x.ServiceName)
 
             .Select(x => new ServiceDto
             {
                 ServiceId = x.ServiceId,
-                ServiceGroupId = x.ServiceGroupId,
                 ServiceName = x.ServiceName,
                 Description = x.Description,
                 GovernmentFee = x.GovernmentFee,
