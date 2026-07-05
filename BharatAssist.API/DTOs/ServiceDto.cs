@@ -8,11 +8,9 @@ public class ServiceDto
 
     public string ServiceName { get; set; } = "";
 
-    public string Description { get; set; } = "";
-
     public decimal GovernmentFee { get; set; }
 
-    public int EstimatedMinutes { get; set; }
+    public string NOTICE { get; set; } = "";
 
-    public string Difficulty { get; set; } = "";
+    public string DirectModuleLink { get; set; } = "";
 }

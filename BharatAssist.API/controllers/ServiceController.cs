@@ -26,15 +26,17 @@ public class ServiceController : ControllerBase
 
             .OrderBy(x => x.ServiceName)
 
+            
             .Select(x => new ServiceDto
             {
                 ServiceId = x.ServiceId,
+                ServiceGroupId = x.ServiceGroupId,
                 ServiceName = x.ServiceName,
-                Description = x.Description,
                 GovernmentFee = x.GovernmentFee,
-                EstimatedMinutes = x.EstimatedMinutes,
-                Difficulty = x.Difficulty
+                NOTICE = x.NOTICE ?? "",
+                DirectModuleLink = x.DirectModuleLink ?? ""
             })
+            
 
             .ToListAsync();
 

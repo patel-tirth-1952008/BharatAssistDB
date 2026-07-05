@@ -56,30 +56,27 @@ public static class DbSeeder
             {
                 ServiceGroupId = aadhaar.ServiceGroupId,
                 ServiceName = "New Aadhaar Card",
-                Description = "Apply for Aadhaar Card",
+               
                 GovernmentFee = 0,
-                EstimatedMinutes = 20,
-                Difficulty = "Easy"
+                
             },
 
             new Service
             {
                 ServiceGroupId = aadhaar.ServiceGroupId,
                 ServiceName = "Update Aadhaar",
-                Description = "Update Aadhaar Details",
+               
                 GovernmentFee = 50,
-                EstimatedMinutes = 15,
-                Difficulty = "Easy"
+               
             },
 
             new Service
             {
                 ServiceGroupId = pan.ServiceGroupId,
                 ServiceName = "New PAN Card",
-                Description = "Apply for PAN Card",
+               
                 GovernmentFee = 107,
-                EstimatedMinutes = 25,
-                Difficulty = "Easy"
+                
             }
 
         );

@@ -14,19 +14,25 @@ public class Service
     [Column("ServiceName")]
     public string ServiceName { get; set; } = "";
 
-    [Column("ShortDescription")]
-    public string Description { get; set; } = "";
-
+    
     [Column("Fee")]
     public decimal GovernmentFee { get; set; }
 
-    [NotMapped]
-    public int EstimatedMinutes { get; set; }
+    [Column("StepNumber")]
+    public string StepNumber { get; set; } = "";
 
-    [NotMapped]
-    public string Difficulty { get; set; } = "Easy";
+    [Column("AndroidGuide")]
+    public string AndroidGuide { get; set; } = "";
 
-    public bool IsActive { get; set; }
+    [Column("Screenshot")]
+    public string Screenshot { get; set; } = "";
+    
+    [Column("WarningText")]
+    public string WarningText { get; set; } = "";
+    
+    [Column("Tip")]
+    public string Tip { get; set; } = "";
+    
 
     public ServiceGroup ServiceGroup { get; set; } = null!;
 
@@ -35,4 +41,8 @@ public class Service
     public ICollection<RequiredDocument> RequiredDocuments { get; set; } = new List<RequiredDocument>();
 
     public ICollection<CommunityTip> CommunityTips { get; set; } = new List<CommunityTip>();
+    [Column("NOTICE")]
+    public string? NOTICE { get; set; }
+    [Column("DirectModuleLink")]
+    public string DirectModuleLink { get; set; } = "";
 }

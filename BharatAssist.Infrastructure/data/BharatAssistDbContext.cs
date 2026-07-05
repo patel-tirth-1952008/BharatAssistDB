@@ -18,7 +18,7 @@ public class BharatAssistDbContext : DbContext
     public DbSet<Faq> Faqs { get; set; }
 
     public DbSet<RequiredDocument> RequiredDocuments { get; set; }
-
+    public DbSet<ServiceGuideStep> ServiceGuideSteps => Set<ServiceGuideStep>();
     public DbSet<CommunityTip> CommunityTips { get; set; }
     public DbSet<User> Users { get; set; }
     
