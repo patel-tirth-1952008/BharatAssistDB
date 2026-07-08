@@ -12,6 +12,8 @@ public class BharatAssistDbContext : DbContext
 
     public DbSet<Category> Categories { get; set; }
 
+    public DbSet<UserFeedback> UserFeedback { get; set; }
+
     public DbSet<ServiceGroup> ServiceGroups { get; set; }
 
     public DbSet<Service> Services { get; set; }

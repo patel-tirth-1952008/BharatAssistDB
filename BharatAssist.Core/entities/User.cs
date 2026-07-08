@@ -8,7 +8,15 @@ public class User
 
     public string Email { get; set; } = "";
 
-    public string Password { get; set; } = "";
+    public string Mobile { get; set; } = "";
 
-    public bool IsAdmin { get; set; }
+    public string PasswordHash { get; set; } = "";
+
+    public int Points { get; set; }
+
+    public string LevelName { get; set; } = "";
+
+    public string Badge { get; set; } = "";
+
+    public DateTime JoinDate { get; set; }
 }
