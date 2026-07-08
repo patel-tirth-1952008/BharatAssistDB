@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using BharatAssist.API.DTOs;
 using BharatAssist.Shared;
 namespace BharatAssist.API.Controllers;
-
+using Microsoft.AspNetCore.Authorization;
 [ApiController]
 [Route("api/[controller]")]
 public class CategoryController : ControllerBase
@@ -46,7 +46,7 @@ public class CategoryController : ControllerBase
 
         return Ok(category);
     }
-
+    [Authorize(Roles="Admin")]
     [HttpPost]
     public IActionResult Create(Category category)
     {
@@ -57,7 +57,7 @@ public class CategoryController : ControllerBase
             new { id = category.CategoryId },
             category);
     }
-
+    [Authorize(Roles="Admin")]
     [HttpPut("{id}")]
     public IActionResult Update(int id, Category updatedCategory)
     {
@@ -75,7 +75,7 @@ public class CategoryController : ControllerBase
 
         return NoContent();
     }
-
+    [Authorize(Roles="Admin")]
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {

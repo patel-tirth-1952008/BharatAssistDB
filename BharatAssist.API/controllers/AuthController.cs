@@ -4,7 +4,7 @@ using BharatAssist.Infrastructure.Data;
 using BharatAssist.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using BharatAssist.API.Services;
 namespace BharatAssist.API.Controllers;
 
 [ApiController]
@@ -12,10 +12,14 @@ namespace BharatAssist.API.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly BharatAssistDbContext _context;
+    private readonly JwtService _jwtService;
 
-    public AuthController(BharatAssistDbContext context)
+    public AuthController(
+        BharatAssistDbContext context,
+        JwtService jwtService)
     {
         _context = context;
+        _jwtService = jwtService;
     }
 
     [HttpPost("register")]
@@ -25,12 +29,16 @@ public class AuthController : ControllerBase
             return BadRequest("Email already exists");
 
         var user = new User
-        {
+{
             FullName = dto.FullName,
             Email = dto.Email,
-            Password = dto.Password,
-            IsAdmin = false
-        };
+            Mobile = "",
+            PasswordHash = dto.Password,
+            Points = 0,
+            LevelName = "Beginner",
+            Badge = "Bronze",
+            JoinDate = DateTime.UtcNow
+};
 
         _context.Users.Add(user);
 
@@ -49,16 +57,16 @@ public class AuthController : ControllerBase
     {
         var user = await _context.Users.FirstOrDefaultAsync(x =>
             x.Email == dto.Email &&
-            x.Password == dto.Password);
+            x.PasswordHash == dto.Password);
 
         if (user == null)
             return Unauthorized();
 
-        return Ok(new ApiResponse<User>
+        var token = _jwtService.GenerateToken(user);
+
+        return Ok(new
         {
-            Success = true,
-            Message = "Login Success",
-            Data = user
+            token = token
         });
     }
 }

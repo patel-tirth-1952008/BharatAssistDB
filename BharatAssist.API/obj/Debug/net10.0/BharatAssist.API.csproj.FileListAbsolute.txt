@@ -10,7 +10,6 @@ C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\Azure.Core.dll
 C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\Azure.Identity.dll
 C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\Humanizer.dll
 C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\Microsoft.Build.Framework.dll
