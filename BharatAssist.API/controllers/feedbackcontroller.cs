@@ -28,6 +28,8 @@ public class FeedbackController : ControllerBase
     [HttpPost("Create")]
 public async Task<IActionResult> Create([FromForm] UserFeedbackDto dto)
 {
+    Console.WriteLine($"WebRootPath: {_environment.WebRootPath}");
+Console.WriteLine($"ContentRootPath: {_environment.ContentRootPath}");
     try
     {
 
