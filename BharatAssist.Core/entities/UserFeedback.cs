@@ -15,4 +15,8 @@ public class UserFeedback
     public string? Adminreply { get; set; }
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+    public string? Issueimage {get;set;}
+
+    public string? Issuevideo{get;set;}
 }

@@ -89,9 +89,9 @@ videoPath = Path.Combine("uploads", "videos", fileName)
             ServiceName = dto.ServiceName,
             Issue = dto.Issue,
             ProblemStatus = "Pending",
+            CreatedAt = DateTime.Now,
             Issueimage = imagePath,
             Issuevideo = videoPath,
-            CreatedAt = DateTime.Now
         };
 
         _context.UserFeedback.Add(feedback);
