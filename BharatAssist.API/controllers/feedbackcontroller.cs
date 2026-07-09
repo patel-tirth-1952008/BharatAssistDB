@@ -19,7 +19,9 @@ public class FeedbackController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(UserFeedbackDto dto)
+public async Task<IActionResult> Create(UserFeedbackDto dto)
+{
+    try
     {
         var feedback = new UserFeedback
         {
@@ -40,19 +42,14 @@ public class FeedbackController : ControllerBase
             Data = ""
         });
     }
-
-    [HttpGet]
-    public async Task<IActionResult> Get()
+    catch (Exception ex)
     {
-        var feedbacks = await _context.UserFeedback
-            .OrderByDescending(x => x.CreatedAt)
-            .ToListAsync();
-
-        return Ok(new ApiResponse<List<UserFeedback>>
+        return StatusCode(500, new
         {
-            Success = true,
-            Message = "Success",
-            Data = feedbacks
+            error = ex.Message,
+            inner = ex.InnerException?.Message,
+            stack = ex.StackTrace
         });
     }
+}
 }
