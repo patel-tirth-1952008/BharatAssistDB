@@ -56,7 +56,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<JwtService>();
 var app = builder.Build();
-
+app.UseStaticFiles();
 // Swagger
 if (app.Environment.IsDevelopment())
 {

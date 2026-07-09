@@ -168,3 +168,4 @@ C:\Users\tirth\BharatAssist\BharatAssist.API\obj\Debug\net10.0\refint\BharatAssi
 C:\Users\tirth\BharatAssist\BharatAssist.API\obj\Debug\net10.0\BharatAssist.API.pdb
 C:\Users\tirth\BharatAssist\BharatAssist.API\obj\Debug\net10.0\BharatAssist.API.genruntimeconfig.cache
 C:\Users\tirth\BharatAssist\BharatAssist.API\obj\Debug\net10.0\ref\BharatAssist.API.dll
+C:\Users\tirth\BharatAssist\BharatAssist.API\bin\Debug\net10.0\BharatAssist.API.staticwebassets.runtime.json
