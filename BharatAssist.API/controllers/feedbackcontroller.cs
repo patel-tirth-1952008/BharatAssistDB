@@ -29,28 +29,33 @@ public class FeedbackController : ControllerBase
             string? imagePath = null;
             string? videoPath = null;
 
+            // Get WebRoot (works locally and on Render)
+            string webRoot = _environment.WebRootPath;
+
+            if (string.IsNullOrEmpty(webRoot))
+            {
+                webRoot = Path.Combine(_environment.ContentRootPath, "wwwroot");
+            }
+
+            // Ensure wwwroot exists
+            if (!Directory.Exists(webRoot))
+            {
+                Directory.CreateDirectory(webRoot);
+            }
+
             // ==========================
             // Save Image
             // ==========================
-
             if (dto.Issueimage != null && dto.Issueimage.Length > 0)
             {
-                string imageFolder = Path.Combine(
-                    _environment.WebRootPath,
-                    "uploads",
-                    "images");
+                string imageFolder = Path.Combine(webRoot, "uploads", "images");
 
-                if (!Directory.Exists(imageFolder))
-                {
-                    Directory.CreateDirectory(imageFolder);
-                }
+                Directory.CreateDirectory(imageFolder);
 
                 string imageFileName =
-                    Guid.NewGuid().ToString() +
-                    Path.GetExtension(dto.Issueimage.FileName);
+                    $"{Guid.NewGuid()}{Path.GetExtension(dto.Issueimage.FileName)}";
 
-                string imageFullPath =
-                    Path.Combine(imageFolder, imageFileName);
+                string imageFullPath = Path.Combine(imageFolder, imageFileName);
 
                 using (var stream = new FileStream(imageFullPath, FileMode.Create))
                 {
@@ -63,25 +68,16 @@ public class FeedbackController : ControllerBase
             // ==========================
             // Save Video
             // ==========================
-
             if (dto.Issuevideo != null && dto.Issuevideo.Length > 0)
             {
-                string videoFolder = Path.Combine(
-                    _environment.WebRootPath,
-                    "uploads",
-                    "videos");
+                string videoFolder = Path.Combine(webRoot, "uploads", "videos");
 
-                if (!Directory.Exists(videoFolder))
-                {
-                    Directory.CreateDirectory(videoFolder);
-                }
+                Directory.CreateDirectory(videoFolder);
 
                 string videoFileName =
-                    Guid.NewGuid().ToString() +
-                    Path.GetExtension(dto.Issuevideo.FileName);
+                    $"{Guid.NewGuid()}{Path.GetExtension(dto.Issuevideo.FileName)}";
 
-                string videoFullPath =
-                    Path.Combine(videoFolder, videoFileName);
+                string videoFullPath = Path.Combine(videoFolder, videoFileName);
 
                 using (var stream = new FileStream(videoFullPath, FileMode.Create))
                 {
@@ -91,26 +87,17 @@ public class FeedbackController : ControllerBase
                 videoPath = $"uploads/videos/{videoFileName}";
             }
 
-            // ==========================
-            // Save Feedback
-            // ==========================
-
             var feedback = new UserFeedback
             {
                 ServiceName = dto.ServiceName,
                 Issue = dto.Issue,
-
                 ProblemStatus = "Pending",
-
                 CreatedAt = DateTime.Now,
-
                 Issueimage = imagePath,
-
                 Issuevideo = videoPath
             };
 
             _context.UserFeedback.Add(feedback);
-
             await _context.SaveChangesAsync();
 
             return Ok(new ApiResponse<string>
